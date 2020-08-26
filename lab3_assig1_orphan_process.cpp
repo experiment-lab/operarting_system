@@ -38,13 +38,13 @@ int main()
 		    cout << "\n";
 		}
 	}
-	 
+
 	                                    // Note negative if fork() fails 
 	else if (pid == 0)                 // and that pid is 0 in child process
 	{ 
 		sleep(30); 
 		printf("in child process");
-        
+   
 		char input = 'D', alphabet = 'A';
 
 		cout << "printing triangle of alphabets: ";
@@ -63,4 +63,4 @@ int main()
 	} 
 
 	return 0; 
-}
+} 
