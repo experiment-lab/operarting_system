@@ -9,31 +9,35 @@
 // 1 2
 // 1 2 3
 // 1 2 3 4
+// child process becomes orphan because its goes to sleep 30s and parent returns exit(0)
+// before execution of child process
  
-#include<stdio.h> 
+#include<bits/stdc++.h> 
 #include <sys/types.h> 
 #include <unistd.h> 
+
+using namespace std;
 
 int main() 
 { 
 	// Create a child process	 
 	int pid = fork(); 
 
-	if (pid > 0) 
+	if (pid > 0){
 		printf("in parent process");
-    int rows = 4;
+		int rows = 4;
 
-    cout << "printing triangle of numbers : ";
+		cout << "printing triangle of numbers : ";
 
-    for(int i = 1; i <= rows; ++i)
-    {
-        for(int j = 1; j <= i; ++j)
-        {
-            cout << j << " ";
-        }
-        cout << "\n";
-    }
-
+		for(int i = 1; i <= rows; ++i)
+		{
+		    for(int j = 1; j <= i; ++j)
+		    {
+			cout << j << " ";
+		    }
+		    cout << "\n";
+		}
+	}
 	 
 	                                    // Note negative if fork() fails 
 	else if (pid == 0)                 // and that pid is 0 in child process
@@ -41,22 +45,22 @@ int main()
 		sleep(30); 
 		printf("in child process");
         
-    char input = 'D', alphabet = 'A';
+		char input = 'D', alphabet = 'A';
 
-    cout << "printing triangle of alphabets: ";
-    cin >> input;
+		cout << "printing triangle of alphabets: ";
+		cin >> input;
 
-    for(int i = 1; i <= (input-'A'+1); ++i)
-    {
-        for(int j = 1; j <= i; ++j)
-        {
-            cout << alphabet << " ";
-        }
-        ++alphabet;
+		for(int i = 1; i <= (input-'A'+1); ++i)
+		{
+		    for(int j = 1; j <= i; ++j)
+		    {
+			cout << alphabet << " ";
+		    }
+		    ++alphabet;
 
-        cout << endl;
-    }
+		    cout << endl;
+		}
 	} 
 
 	return 0; 
-} 
+}
