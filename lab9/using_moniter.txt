@@ -58,8 +58,8 @@ monitor DP
 		// Execution of Pickup(), Putdown() and test() 
 		// are all mutually exclusive, 
 		// i.e. only one at a time can be executing 
-for
-	i = 0 to 4 
+		
+		for i = 0 to 4 
 
 		// Verify that this monitor-based solution is 
 		// deadlock free and mutually exclusive in that 
