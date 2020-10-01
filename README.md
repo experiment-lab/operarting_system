@@ -1,8 +1,8 @@
 # operarting_system
                   # MANIT
                  
-> repositories's Owner = Jaydeep Badoule \n
-> scholar no  = 181112017 \n
-> semester = V \n
-> course  =  Operating System (CSE 312) \n
+> repositories's Owner = Jaydeep Badoule,
+> scholar no  = 181112017 ,
+> semester = V,
+> course  =  Operating System (CSE 312),
 > coordinator = Prof. Semwal Vijay Bhaskar
